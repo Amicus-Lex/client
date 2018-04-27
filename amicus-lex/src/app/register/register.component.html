@@ -1,0 +1,48 @@
+<div class="signUpContainer">
+  <div class="logoContainer"><img class="logoImage" src="/assets/logo.png" /></div>
+  <form>
+      <div *ngIf="!successMessage; else success">
+          <mat-input-container>
+              <input matInput placeholder="Email" name="email" type="email" [(ngModel)]="email" >
+          </mat-input-container>
+
+          <mat-input-container>
+              <input matInput placeholder="Username" name="username" type="text" [(ngModel)]="username" >
+          </mat-input-container>
+
+          <mat-input-container>
+            <input matInput placeholder="First Name" name="firstname" type="text" [(ngModel)]="firstname" >
+          </mat-input-container>
+
+          <mat-input-container>
+            <input matInput placeholder="Last Name" name="lastname" type="text" [(ngModel)]="lastname" >
+          </mat-input-container>
+
+          <mat-input-container>
+            <input matInput placeholder="Adresse" name="adresse" type="text" [(ngModel)]="adresse" >
+          </mat-input-container>
+
+          <mat-input-container>
+            <input matInput placeholder="City" name="city" type="text" [(ngModel)]="city" >
+          </mat-input-container>
+
+          <mat-input-container>
+            <input matInput placeholder="Postal Code" name="postalcode" type="text" [(ngModel)]="postalcode" >
+          </mat-input-container>
+
+          <mat-input-container>
+              <input matInput placeholder="Password" name="password1" type="password" [(ngModel)]="password1" >
+          </mat-input-container>
+
+          <mat-input-container>
+              <input matInput placeholder="Password Confirmation" name="password2" type="password" [(ngModel)]="password2" >
+          </mat-input-container>
+
+          <button class="button buttonOrange" *ngIf="!loading" (click)="signup()">Register</button>
+          <mat-progress-bar *ngIf="loading" mode="indeterminate" color="accent"></mat-progress-bar>
+      </div>
+      <ng-template #success>
+          {{ successMessage }}
+      </ng-template>
+  </form>
+</div>
