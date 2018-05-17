@@ -11,6 +11,7 @@ import { ProfileComponent } from './profile/profile.component';
 import { DetailsComponent } from './details/details.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
+import { MainComponent } from './main/main.component';
 //import {NeedAuthGuard} from "./route-guards/need-auth.guard";
 //import {NeedAnonGuard} from "./route-guards/need-anon.guard";
 
@@ -23,6 +24,7 @@ import { SearchComponent } from './search/search.component';
     DetailsComponent,
     RegisterComponent,
     SearchComponent,
+    MainComponent,
   ],
   imports: [
     BrowserModule,

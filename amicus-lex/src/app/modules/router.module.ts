@@ -7,9 +7,10 @@ import {DetailsComponent} from '../details/details.component';
 import {ProfileComponent} from '../profile/profile.component';
 import {RegisterComponent} from '../register/register.component';
 import {SearchComponent} from '../search/search.component';
+import {MainComponent} from '../main/main.component';
 
 const routes: Routes = [
-  
+    {path: '', component: MainComponent},
     {path: 'login', component: LoginComponent},
     {path: 'details', component: DetailsComponent},
     {path: 'register', component: RegisterComponent},
