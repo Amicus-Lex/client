@@ -1,0 +1,18 @@
+.seachtools{
+    position: relative;
+    width: 100%;
+    margin-left: 50px;
+    margin-top: 5%;
+    text-align: center;
+  }
+  
+  .seachtools input {
+    width: 50%;
+    height: 30px;
+  }
+  
+  .row .pagination {
+    margin-top: 100px;
+    text-align: center;
+    list-style-type: none;
+  }

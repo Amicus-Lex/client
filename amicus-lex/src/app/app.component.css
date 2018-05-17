@@ -13,3 +13,15 @@ ul li {
 .login-and-reg-menu {
   display: inline-flex;
 }
+
+.separater{
+  margin-left: 2%;
+}
+
+
+
+.linksForRoutes{
+  margin-right: 10px;
+  color: #FFFFFF;
+  text-decoration: none;
+}

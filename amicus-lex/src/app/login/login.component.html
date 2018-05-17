@@ -8,9 +8,8 @@
           <input matInput placeholder="Password" name="password" type="password" [(ngModel)]="password" >
       </mat-input-container>
       <button class="button buttonOrange" *ngIf="!loading" (click)="login()">Login</button>
-      <button class="button buttonBlue" *ngIf="!loading" (click)="facebookLogin()">Facebook Login</button>
+      <!--button class="button buttonBlue" *ngIf="!loading" (click)="facebookLogin()">Facebook Login</button-->
       <mat-progress-bar *ngIf="loading" mode="indeterminate" color="accent"></mat-progress-bar>
-      <a (click)="openResetPasswordDialog()">Forgot your password ?</a>
   </form>
 </div>
 

@@ -10,6 +10,7 @@ import { LoginComponent } from './login/login.component';
 import { ProfileComponent } from './profile/profile.component';
 import { DetailsComponent } from './details/details.component';
 import { RegisterComponent } from './register/register.component';
+import { SearchComponent } from './search/search.component';
 //import {NeedAuthGuard} from "./route-guards/need-auth.guard";
 //import {NeedAnonGuard} from "./route-guards/need-anon.guard";
 
@@ -20,7 +21,8 @@ import { RegisterComponent } from './register/register.component';
     LoginComponent,
     ProfileComponent,
     DetailsComponent,
-    RegisterComponent
+    RegisterComponent,
+    SearchComponent,
   ],
   imports: [
     BrowserModule,

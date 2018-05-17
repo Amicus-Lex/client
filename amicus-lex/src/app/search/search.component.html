@@ -1,0 +1,17 @@
+<div class="seachtools">
+    <div class="inlinef" style="">
+        <input placeholder="search" type="text" />
+          <button id="seachbtn" mat-raised-button color="primary"><i class="material-icons">search</i></button>
+    </div>
+  </div>
+  
+  
+  <div class="row">
+    <ul class="pagination">
+        <li [class.waves-effect]="i + 1 != currentPage" [class.active]="i + 1 == currentPage" *ngFor="let p of [].constructor(totalPages) ; let i = index">
+            <a style="cursor: pointer;" (click)="getList(i + 1);">
+                {{ i + 1 }}
+            </a>
+        </li>
+    </ul>
+  </div>  
