@@ -9,3 +9,11 @@
     display: inline-block;
     margin-left: 1%;
 }
+
+mat-card-actions{
+    text-align: right;
+}
+
+mat-card-footer{
+    text-align: center;
+}
