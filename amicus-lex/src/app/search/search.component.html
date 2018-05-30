@@ -1,7 +1,15 @@
 <div class="seachtools">
     <div class="inlinef" style="">
+          <mat-form-field>
+            <mat-select placeholder="select a category" [(ngModel)]="selectedValue" name="lawCat">
+              <mat-option *ngFor="let lawCat of lawCats" [value]="lawCat.value">
+                {{lawCat.viewValue}}
+              </mat-option>
+            </mat-select>
+          </mat-form-field>
+          <!--p> Selected value: {{selectedValue}} </p-->
         <input placeholder="search" type="text" />
-          <button id="seachbtn" mat-raised-button color="primary"><i class="material-icons">search</i></button>
+          <button id="seachbtn" mat-raised-button ><i class="material-icons">search</i></button>
     </div>
   </div>
   
@@ -11,7 +19,7 @@
       <hr>
       <mat-card-content>Lorem ipsum dolor sit amet, consectetur adipiscing elit. Aliquam molestie, mi ut ultricies hendrerit, risus neque rhoncus massa, commodo rhoncus erat nisi id ante. Maecenas eu orci a lacus dignissim venenatis a a felis. Aliquam ultricies lobortis dignissim. Sed tempor blandit mi, quis venenatis erat. Cras tempor, ipsum id euismod tincidunt, nulla augue sagittis odio, non condimentum ex dolor sit amet purus. Sed ac volutpat tellus. Nulla malesuada odio massa, eu hendrerit risus pretium ut.</mat-card-content>
       <img mat-card-image>
-      <mat-card-actions>Plus d'information</mat-card-actions>
+      <button mat-raised-button (click)="openDialog()">Plus d'information</button>
       <hr>    
       <mat-card-footer>Footer</mat-card-footer>
     </mat-card>

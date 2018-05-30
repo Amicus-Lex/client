@@ -17,3 +17,7 @@ mat-card-actions{
 mat-card-footer{
     text-align: center;
 }
+mat-card.mat-card
+{
+    background: linear-gradient(#cecece, white);
+}

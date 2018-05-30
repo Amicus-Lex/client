@@ -5,6 +5,7 @@
     <mat-card-content>{{contact.location}}{{contact.role}}{{contact.company}}</mat-card-content>
     <img mat-card-image>
     <mat-card-actions>{{contact.info}}</mat-card-actions>
+    <button mat-raised-button (click)="openDialog()">Plus d'information</button>
     <hr>    
     <mat-card-footer>{{contact.email}}{{contact.twitter}}</mat-card-footer>
   </mat-card>

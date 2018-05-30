@@ -20,3 +20,48 @@ mat-card-actions{
 mat-card-footer{
     text-align: center;
 }
+
+mat-card.mat-card
+{
+    background: linear-gradient(#cecece, white);
+}
+
+.mat-toolbar.mat-primary {
+    background: #336699 !important;
+}
+
+.logo{
+    outline : none;
+}
+/*
+button {
+   color: #DCDCDC !important;
+}
+*/
+@media only screen and (max-width: 768px) {
+    /* For mobile phones: */
+
+    .card-param {
+        width: 100% !important;
+    }
+
+    .logo{
+        margin-left: -10% !important;
+        margin-top: 5% !important;
+        width: 36% !important;
+        outline : none;
+    }
+
+    .logoImage {
+        margin-top: 10% !important;
+        margin-bottom: 10% !important;
+    }
+
+    .seachtools {
+        position: relative;
+        width: unset !important;
+        margin-left: unset !important;
+        margin-top: unset !important;
+        text-align: center;
+    }
+}
