@@ -12,6 +12,7 @@ import { DetailsComponent } from './details/details.component';
 import { RegisterComponent } from './register/register.component';
 import { SearchComponent } from './search/search.component';
 import { MainComponent } from './main/main.component';
+import {HttpModule} from '@angular/http';
 //import {NeedAuthGuard} from "./route-guards/need-auth.guard";
 //import {NeedAnonGuard} from "./route-guards/need-anon.guard";
 
@@ -32,6 +33,7 @@ import { MainComponent } from './main/main.component';
     MaterialModule,
     FormsModule,
     RoutingModule,
+    HttpModule,
   ],
   providers: [],
   bootstrap: [AppComponent]
