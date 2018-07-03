@@ -5,6 +5,7 @@ import { RouterModule, Routes } from '@angular/router';
 
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do';
 import 'rxjs/add/operator/catch';
 import { MainComponent }      from '../main/main.component';
 import { Router } from '@angular/router';
@@ -43,6 +44,9 @@ export class RegisterComponent implements OnInit {
     email: emailadress,
     password_confirmation:confpassword,
     password: password,
+    })
+    .do(res => {
+      if(res.status === 200) this.router.navigate(['/login']);
     })
       .subscribe(
         res => {

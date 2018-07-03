@@ -4,6 +4,8 @@ import { Http }       from '@angular/http';
 
 import { Observable }     from 'rxjs/Observable';
 import 'rxjs/add/operator/map';
+import 'rxjs/add/operator/do'
+import { Router } from '@angular/router';
 
 @Component({
   selector: 'app-login',
@@ -12,7 +14,7 @@ import 'rxjs/add/operator/map';
 })
 export class LoginComponent implements OnInit {
 
-  constructor(private http: Http) { }
+  constructor(private http: Http, private router:Router) { }
 
   ngOnInit() {
   }
@@ -34,7 +36,10 @@ export class LoginComponent implements OnInit {
     email: emailadress,
       password: password,
     })
-      .subscribe(
+    .do(res => {
+      if(res.status === 200) this.router.navigate(['/']);
+    }) 
+    .subscribe(
         res => {
           console.log(res);
         },
