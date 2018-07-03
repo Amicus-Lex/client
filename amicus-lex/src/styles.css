@@ -33,6 +33,11 @@ mat-card.mat-card
 .logo{
     outline : none;
 }
+
+button.mat-raised-button {
+    margin-bottom: 5%;
+}
+
 /*
 button {
    color: #DCDCDC !important;

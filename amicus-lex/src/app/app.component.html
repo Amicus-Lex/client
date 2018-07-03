@@ -11,6 +11,7 @@
     <ul class="right inlinef login-and-reg-menu">
         <button mat-button [matMenuTriggerFor]="menu"><mat-icon>menu</mat-icon></button>
         <mat-menu #menu="matMenu">
+          <button mat-menu-item><a class="linksForRoutes" routerLink="/"><mat-icon>home</mat-icon>Home</a></button>
           <button mat-menu-item><a class="linksForRoutes" routerLink="/search"><mat-icon>search</mat-icon>Search</a></button>
           <button mat-menu-item><a class="linksForRoutes" routerLink="/login" routerLinkActive="active" style="margin-right: 10px"><mat-icon>assignment_ind</mat-icon>Login</a></button>
           <button mat-menu-item><a class="linksForRoutes" routerLink="/register" routerLinkActive="active"><mat-icon>assignment</mat-icon>Register</a></button>

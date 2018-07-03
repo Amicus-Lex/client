@@ -15,7 +15,6 @@ export class MainComponent implements OnInit {
   result: any ={};
 
   constructor(private http: Http, public dialog: MatDialog){
-    console.log('hello test');
     this.getContacts();
     this.getData();
   }
@@ -32,13 +31,11 @@ export class MainComponent implements OnInit {
   }
 
   getData(){
-    console.log('hello test');
     return this.http.get(this.apiUrl)
       .map((res: Response) => res.json())
   }
 
   getContacts(){
-    console.log('hello test');
     this.getData().subscribe(data =>{
       console.log(data);
       this.data = data

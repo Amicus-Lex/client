@@ -21,3 +21,9 @@ mat-card.mat-card
 {
     background: linear-gradient(#cecece, white);
 }
+
+.example-fill-remaining-space {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+  }

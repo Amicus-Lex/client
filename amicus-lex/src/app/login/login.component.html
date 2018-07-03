@@ -1,13 +1,13 @@
 <div class="loginContainer">
   <div class="logoContainer"><img class="logoImage" src="/assets/logo.png" /></div>
-  <form>
+  <form (submit)="loginUser($event)">
       <mat-input-container>
-          <input matInput placeholder="Username" name="username" type="text" [(ngModel)]="username" >
+          <input matInput placeholder="E-Mail Address" name="email" type="email" [(ngModel)]="email" >
       </mat-input-container>
       <mat-input-container>
           <input matInput placeholder="Password" name="password" type="password" [(ngModel)]="password" >
       </mat-input-container>
-      <button class="button buttonOrange" *ngIf="!loading" (click)="login()">Login</button>
+      <button class="button buttonOrange" *ngIf="!loading" type="submit" value="Login">Login</button>
       <!--button class="button buttonBlue" *ngIf="!loading" (click)="facebookLogin()">Facebook Login</button-->
       <mat-progress-bar *ngIf="loading" mode="indeterminate" color="accent"></mat-progress-bar>
   </form>

@@ -1,3 +1,7 @@
+<mat-toolbar >
+  <span style="align-content:center;">Les Actualités</span>
+</mat-toolbar>
+
 <div class="card-param" *ngFor="let contact of data.contacts">
   <mat-card>
     <mat-card-title>{{contact.name}}</mat-card-title>
@@ -5,8 +9,11 @@
     <mat-card-content>{{contact.location}}{{contact.role}}{{contact.company}}</mat-card-content>
     <img mat-card-image>
     <mat-card-actions>{{contact.info}}</mat-card-actions>
-    <button mat-raised-button (click)="openDialog()">Plus d'information</button>
-    <hr>    
-    <mat-card-footer>{{contact.email}}{{contact.twitter}}</mat-card-footer>
+    <button mat-raised-button (click)="openDialog()">Plus d'information<mat-icon>more_horiz</mat-icon></button>
+    <mat-card-footer></mat-card-footer>
   </mat-card>
 </div>
+
+<mat-toolbar>
+  <span>Thèmes Favori</span>
+</mat-toolbar>
