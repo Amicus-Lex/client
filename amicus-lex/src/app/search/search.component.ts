@@ -8,24 +8,18 @@ import {Http, Response } from '@angular/http';
 })
 export class SearchComponent implements OnInit {
   
-  //private apiUrl = 'https://amicus-lex.herokuapp.com/law/themes';
+  private apiUrl = 'https://amicus-lex.herokuapp.com/law/themes';
   data: any = {};
   userTheme:string = 'Personnes';
 
-  themes = [
-    {value: 'Personnes', viewValue: 'Livre Ier'},
-    {value: 'Propriétés', viewValue: 'Livre II'},
-    {value: "Acquisition de biens", viewValue: 'Livre III'},
-    {value: 'Suretes', viewValue: 'Livre IV'},
-    {value: "Disposition pour la mayotte", viewValue: 'Livre V'}    
-  ];
+  themes = this.getThemes();
 
   themes2 = [
     {value:this.data[0],viewValue:this.data[1]}
   ];
 
   constructor(private http: Http){
-    //this.getThemes();
+    this.getThemes();
     //this.getData();
   }
 
@@ -35,6 +29,18 @@ export class SearchComponent implements OnInit {
  
   Print = function(){
     alert(this.userTheme);
+}
+getThemeData = function(theme, key){
+  console.log(theme,key);
+  stop();
+  this.http.get('https://amicus-lex.herokuapp.com/law/search?book='+theme+'&article=' + ''+'&notArticle='+''+'&title='+2)
+  .map((res: Response) => res.json())
+  .subscribe(data => {
+console.log(data);
+this.data = data;
+});
+
+ console.log(theme.value);
 }
 
   lunchSearch(e){
@@ -79,18 +85,18 @@ export class SearchComponent implements OnInit {
   }*/
   }
 
-  /*getData(){
+  getData(){
     return this.http.get(this.apiUrl)
       .map((res: Response) => res.json())
   }
 
   getThemes(){
     this.getData().subscribe(data =>{
-      this.data = data;
-      console.log(data);      
+      this.themes= data;
+      console.log(this.themes);      
     })
   }
-*/
+
 
   ngOnInit() {
   }

@@ -1,7 +1,7 @@
 <div class="seachtools" >
     <form class="inlinef" (submit)="lunchSearch($event)">
         <mat-form-field>
-            <mat-select placeholder="Theme" ng-model="userTheme" (ngModelChange)="lunchSearch($event)" ng-change="Print()">
+            <mat-select placeholder="Theme" ng-model="userTheme" (change)="getThemeData($event)">
               <mat-option *ngFor="let theme of themes" name="theme" type="text"  [value]="theme.value">
                 {{ theme.value }}
               </mat-option>
