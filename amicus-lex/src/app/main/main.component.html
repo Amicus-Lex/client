@@ -2,13 +2,13 @@
   <span style="align-content:center;">Les Actualités</span>
 </mat-toolbar>
 
-<div class="card-param" *ngFor="let contact of data.contacts">
+<div class="card-param" *ngFor="let contact of data.feed.entry">
   <mat-card>
-    <mat-card-title>{{contact.name}}</mat-card-title>
+    <mat-card-title>{{contact.title}}</mat-card-title>
     <hr>
-    <mat-card-content>{{contact.location}}{{contact.role}}{{contact.company}}</mat-card-content>
+    <mat-card-content>{{contact.summary}}</mat-card-content>
     <img mat-card-image>
-    <mat-card-actions>{{contact.info}}</mat-card-actions>
+    <mat-card-actions>{{contact.published}}</mat-card-actions>
     <button mat-raised-button (click)="openDialog()">Plus d'information<mat-icon>more_horiz</mat-icon></button>
     <mat-card-footer></mat-card-footer>
   </mat-card>
